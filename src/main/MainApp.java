@@ -10,7 +10,7 @@ public class MainApp {
 		LoginPresenterImpl presenter = new LoginPresenterImpl();
 		view.setPresenter(presenter);
 		presenter.setView(view);
-
+		presenter.init();
 	}
 
 }

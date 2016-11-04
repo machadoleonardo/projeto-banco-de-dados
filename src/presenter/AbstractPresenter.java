@@ -9,6 +9,11 @@ public abstract class AbstractPresenter<VIEW extends View<PRESENTER, FORM>, FORM
 	@SuppressWarnings("unused")
 	private VIEW view;
 
+	@Override
+	public void init() {
+		this.view.paint();
+	}
+
 	public void setView(VIEW view) {
 		this.view = view;
 	}
