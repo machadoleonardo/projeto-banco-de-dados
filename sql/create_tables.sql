@@ -1,35 +1,66 @@
 --------------------------------------------------------
-------------- Table TipoPista --------------------------
+------------- TABLE TIPOPISTA --------------------------
 --------------------------------------------------------
-CREATE TABLE IF NOT EXISTS TipoPista (
-  id INT NOT NULL UNIQUE,
-  descricao VARCHAR(30) NULL,
-  PRIMARY KEY (idevento));
+CREATE SEQUENCE SEQ_ID_TIPO_PISTA
+  INCREMENT 1
+  MINVALUE 0
+  MAXVALUE 999999999999999999
+  START 0
+  CACHE 1;
+
+  
+CREATE TABLE IF NOT EXISTS TIPO_PISTA (
+  ID_TIPO_PISTA INT NOT NULL DEFAULT nextval('SEQ_ID_TIPO_PISTA'::regclass),
+  DESCRICAO VARCHAR(30) NULL UNIQUE,
+  PRIMARY KEY (ID_TIPO_PISTA));
   
   
 --------------------------------------------------------
-------------- Table TipoEnvolvido ----------------------
+------------- TABLE TIPOENVOLVIDO ----------------------
 --------------------------------------------------------
-CREATE TABLE IF NOT EXISTS TipoEnvolvido (
-  id INT NOT NULL UNIQUE,
-  descricao VARCHAR(30) NULL,
-  PRIMARY KEY (idevento));
+CREATE SEQUENCE SEQ_ID_TIPO_ENVOLVIDO
+  INCREMENT 1
+  MINVALUE 0
+  MAXVALUE 999999999999999999
+  START 0
+  CACHE 1;
+  
+CREATE TABLE IF NOT EXISTS TIPO_ENVOLVIDO (
+  ID_TIPO_ENVOLVIDO INT NOT NULL DEFAULT nextval('SEQ_ID_TIPO_ENVOLVIDO'::regclass),
+  DESCRICAO VARCHAR(30) NULL UNIQUE,
+  PRIMARY KEY (ID_TIPO_ENVOLVIDO));
 
   
 --------------------------------------------------------
-------------- Table TipoVeiculo ------------------------
+------------- TABLE TIPOVEICULO ------------------------
 --------------------------------------------------------
-CREATE TABLE IF NOT EXISTS TipoVeiculo (
-  id INT NOT NULL UNIQUE,
-  descricao VARCHAR(30) NULL,
-  PRIMARY KEY (idevento));
+CREATE SEQUENCE SEQ_ID_TIPO_VEICULO
+  INCREMENT 1
+  MINVALUE 0
+  MAXVALUE 999999999999999999
+  START 0
+  CACHE 1;
+  
+CREATE TABLE IF NOT EXISTS TIPO_VEICULO (
+  ID_TIPO_VEICULO INT NOT NULL DEFAULT nextval('SEQ_ID_TIPO_VEICULO'::regclass),
+  DESCRICAO VARCHAR(30) NULL UNIQUE,
+  PRIMARY KEY (ID_TIPO_VEICULO));
 
   
 --------------------------------------------------------
-------------- Table TipoAcidente -----------------------
+------------- TABLE TIPOACIDENTE -----------------------
 --------------------------------------------------------
-CREATE TABLE IF NOT EXISTS TipoAcidente (
-  id INT NOT NULL UNIQUE,
-  descricao VARCHAR(30) NULL,
-  PRIMARY KEY (idevento));
+CREATE SEQUENCE SEQ_ID_TIPO_ACIDENTE
+  INCREMENT 1
+  MINVALUE 0
+  MAXVALUE 999999999999999999
+  START 0
+  CACHE 1;
+  
+CREATE TABLE IF NOT EXISTS TIPO_ACIDENTE (
+  ID_TIPO_ACIDENTE INT NOT NULL DEFAULT nextval('SEQ_ID_TIPO_ACIDENTE'::regclass),
+  DESCRICAO VARCHAR(30) NULL UNIQUE,
+  PRIMARY KEY (ID_TIPO_ACIDENTE));
+
+
 
